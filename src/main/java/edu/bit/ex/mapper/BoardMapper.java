@@ -12,6 +12,27 @@ public List<BoardVO> getList(); //자손을 BoardMapper.xml로 구현한다. 마이바티스!
 
 public void insert(BoardVO boardVO);
 
+
+public BoardVO read(int bno);
+
+
+public BoardVO reply(int bno1);
+
+
+public void replyinsert(BoardVO boardVO);
+
+
+public BoardVO uphit(int bno3);
+
+
+public BoardVO delete(int bno4);
+
+
+public void modify(BoardVO boardVO);
+
+
+public void replyshape(BoardVO boardVO);
+
 	
 	
 

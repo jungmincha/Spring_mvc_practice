@@ -20,7 +20,7 @@
     </appender>
    
    <!-- Application Loggers -->
-   <logger name="edu.bit.board">
+   <logger name="edu.bit.ex">
       <level value="info" />
    </logger>
    
