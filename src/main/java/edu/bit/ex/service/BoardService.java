@@ -1,7 +1,8 @@
 package edu.bit.ex.service;
 
-import java.util.List; 
+import java.util.List;
 
+import edu.bit.ex.page.Criteria;
 import edu.bit.ex.vo.BoardVO;
 
 public interface BoardService {
@@ -19,6 +20,10 @@ public interface BoardService {
 	public void inputDelete(int getbId);
 
 	public void modifyBoard(BoardVO boardVO);
+
+	public List<BoardVO> getList(Criteria cri);
+
+	public int getTotal(Criteria cri);
 
 	
 	

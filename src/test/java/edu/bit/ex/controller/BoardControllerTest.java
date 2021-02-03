@@ -61,31 +61,31 @@ public class BoardControllerTest {
 	   
 	   @Test
 	   public void testreply_view() throws Exception {
-		      mockMvc.perform(get("/reply_view"))//겟방식으로 리스트르 ㄹ받는다.
-		      .andExpect(status().isOk())//응답검증 200ok 서버??
-		      .andDo(print())//print 뿌리는거. 
-		      .andExpect(forwardedUrl("/WEB-INF/views/reply_view.jsp")); //포워딩해서 가상환경에서 돌리는거. 
-		      // 콘솔에 넘어오는걸 보고 확인해야한다.
+		      mockMvc.perform(get("/reply_view"))
+		      .andExpect(status().isOk())
+		      .andDo(print())
+		      .andExpect(forwardedUrl("/WEB-INF/views/reply_view.jsp"));  
+		      
 		   }
 	   
 	   
 	   @Test
 	   public void testcontent_view() throws Exception {
-		      mockMvc.perform(get("/content_view"))//겟방식으로 리스트르 ㄹ받는다.
-		      .andExpect(status().isOk())//응답검증 200ok 서버??
-		      .andDo(print())//print 뿌리는거. 
-		      .andExpect(forwardedUrl("/WEB-INF/views/content_view.jsp")); //포워딩해서 가상환경에서 돌리는거. 
-		      // 콘솔에 넘어오는걸 보고 확인해야한다.
+		      mockMvc.perform(get("/content_view"))
+		      .andExpect(status().isOk())
+		      .andDo(print())
+		      .andExpect(forwardedUrl("/WEB-INF/views/content_view.jsp"));  
+		      
 		   }
 	   
 	   
 	   @Test
 	   public void testwrite_view() throws Exception {
-		      mockMvc.perform(get("/write_view"))//겟방식으로 리스트르 ㄹ받는다.
-		      .andExpect(status().isOk())//응답검증 200ok 서버??
-		      .andDo(print())//print 뿌리는거. 
+		      mockMvc.perform(get("/write_view"))
+		      .andExpect(status().isOk())
+		      .andDo(print())
 		      .andExpect(forwardedUrl("/WEB-INF/views/write_view.jsp")); //포워딩해서 가상환경에서 돌리는거. 
-		      // 콘솔에 넘어오는걸 보고 확인해야한다.
+		    
 		   }
 	   
 	   

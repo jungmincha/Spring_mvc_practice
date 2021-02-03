@@ -1,7 +1,8 @@
 package edu.bit.ex.mapper;
 
-import java.util.List; 
+import java.util.List;
 
+import edu.bit.ex.page.Criteria;
 import edu.bit.ex.vo.BoardVO;
 
 public interface BoardMapper {
@@ -32,6 +33,12 @@ public void modify(BoardVO boardVO);
 
 
 public void replyshape(BoardVO boardVO);
+
+
+public List<BoardVO> arrayList(Criteria cri);
+
+
+public int getTotal(Criteria cri);
 
 	
 	

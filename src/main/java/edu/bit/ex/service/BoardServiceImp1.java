@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import edu.bit.ex.mapper.BoardMapper;
+import edu.bit.ex.page.Criteria;
 import edu.bit.ex.vo.BoardVO;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
@@ -69,8 +70,19 @@ public class BoardServiceImp1 implements BoardService{ //로직은 여기들어가야한다
 		mapper.modify(boardVO);
 	}
 
-
-
+	@Override
+	public List<BoardVO> getList(Criteria cri) {
 	
+		return mapper.arrayList(cri);
+	}
+
+	@Override
+	public int getTotal(Criteria cri) {
+		
+		return mapper.getTotal(cri);
+
+
+
+	}
 }
 
