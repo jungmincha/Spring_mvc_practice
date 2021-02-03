@@ -1,6 +1,6 @@
 package edu.bit.ex.service;
 
-import java.util.List;
+import java.util.List; 
 
 import org.springframework.stereotype.Service;
 
@@ -12,7 +12,7 @@ import lombok.extern.log4j.Log4j;
 @Service
 @AllArgsConstructor //생성자로 담고 있다 new 생성안해주어도 됨
 
-public class BoardServiceImp1 implements BoardService{
+public class BoardServiceImp1 implements BoardService{ //로직은 여기들어가야한다.
 
 	//@Autowired
 	//@Inject
@@ -36,6 +36,7 @@ public class BoardServiceImp1 implements BoardService{
 	@Override
 	public BoardVO getBoard(int bno) {
 		log.info("getBoard........");
+		mapper.uphit(bno);
 		return mapper.read(bno);
 	}
 
@@ -47,15 +48,14 @@ public class BoardServiceImp1 implements BoardService{
 
 	@Override
 	public void replyBoard(BoardVO boardVO) {
+		log.info("replyBoard........");
 		mapper.replyinsert(boardVO);
+		mapper.replyshape(boardVO);
 		
 	}
+	
 
-	@Override
-	public BoardVO upHit(int bno3) {
-		log.info("upHit........");
-		return mapper.uphit(bno3);
-	}
+
 
 	@Override
 	public void inputDelete(int bno4) {
@@ -70,11 +70,7 @@ public class BoardServiceImp1 implements BoardService{
 	}
 
 
-	@Override
-	public void replyShape(BoardVO boardVO) {
-		log.info("replyShape........");
-		mapper.replyshape(boardVO);
-	}
+
 	
 }
 

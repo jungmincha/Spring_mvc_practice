@@ -33,10 +33,13 @@
    <insert id="replyinsert">
    <![CDATA[
       insert into mvc_board (bId, bName, bTitle, bContent, bGroup, bStep, bIndent) values (mvc_board_seq.nextval, #{bName}, #{bTitle}, #{bContent}, #{bGroup}, #{bStep}+1, #{bIndent}+1)
+   
+   
+   
    ]]>
    </insert>
    
-   <select id="uphit" resultType="edu.bit.ex.vo.BoardVO">
+   <select id="uphit">
    <![CDATA[
       update mvc_board set bHit = bHit + 1 where bId = #{bno3}
    ]]>
@@ -55,7 +58,7 @@
    </insert>
    
    
-   <select id="replyshape" >
+   <select id="replyshape">
    <![CDATA[
       update mvc_board set bStep = bStep + 1 where bGroup = #{bGroup} and bStep > #{bStep}
    ]]>

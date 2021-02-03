@@ -16,12 +16,10 @@ public interface BoardService {
 
 	public void replyBoard(BoardVO boardVO);
 
-	public BoardVO upHit(int getbId);
-
 	public void inputDelete(int getbId);
 
 	public void modifyBoard(BoardVO boardVO);
 
-	public void replyShape(BoardVO boardVO);
+	
 	
 }

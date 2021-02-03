@@ -35,7 +35,7 @@ public class BoardController {
    
    
    @PostMapping("/write")//글작성 폼에서 정보입력(즉, insert)
-   public String write( BoardVO boardVO, Model model)throws Exception {
+   public String write( BoardVO boardVO)throws Exception {
       log.info("write");
       boardService.writeBoard(boardVO); 
       return "redirect:list";
@@ -50,16 +50,12 @@ public class BoardController {
    
    
    
-   
    @GetMapping("/content_view")
    public String content_view(BoardVO boardVO, Model model) throws Exception{
       log.info("content_view");
       
       model.addAttribute("content_view", boardService.getBoard(boardVO.getbId()));
-      
-      boardService.upHit(boardVO.getbId());
-      
-      
+       
       return "content_view";
    }
    
@@ -73,11 +69,9 @@ public class BoardController {
    }
    
    @PostMapping("/reply")
-   public String reply( BoardVO boardVO, Model model)throws Exception {
+   public String reply( BoardVO boardVO)throws Exception {
       log.info("reply");
       boardService.replyBoard(boardVO); 
-      
-      boardService.replyShape(boardVO); 
       
       return "redirect:list";
    }
